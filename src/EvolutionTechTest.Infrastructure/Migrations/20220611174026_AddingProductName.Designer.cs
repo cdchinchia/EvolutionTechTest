@@ -3,6 +3,7 @@ using EvolutionTechTest.Infrastructure.Respositories.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EvolutionTechTest.Infrastructure.Migrations
 {
     [DbContext(typeof(EvolutionTestContext))]
-    partial class EvolutionTestContextModelSnapshot : ModelSnapshot
+    [Migration("20220611174026_AddingProductName")]
+    partial class AddingProductName
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

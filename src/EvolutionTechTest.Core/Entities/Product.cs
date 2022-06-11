@@ -9,6 +9,9 @@ namespace EvolutionTechTest.Core.Entities
     {
         [Column("ProID")]
         public int Id { get; set; }
+        [Column("ProNombre")]
+        [MaxLength(50)]
+        public string Name { get; set; }
         [Column("ProDesc")]
         [MaxLength(50)]
         public string Description { get; set; }

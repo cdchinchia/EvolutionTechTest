@@ -3,11 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32414.318
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvolutionTechTest.API", "src\EvolutionTechTest.API\EvolutionTechTest.API.csproj", "{96C028B6-584B-4A09-9507-1EBE6DFF3488}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvolutionTechTest.API", "src\EvolutionTechTest.API\EvolutionTechTest.API.csproj", "{96C028B6-584B-4A09-9507-1EBE6DFF3488}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvolutionTechTest.Core", "src\EvolutionTechTest.Core\EvolutionTechTest.Core.csproj", "{2C13D34C-C54D-4E1F-8431-82FFC9FF5BBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvolutionTechTest.Core", "src\EvolutionTechTest.Core\EvolutionTechTest.Core.csproj", "{2C13D34C-C54D-4E1F-8431-82FFC9FF5BBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvolutionTechTest.Infrastructure", "src\EvolutionTechTest.Infrastructure\EvolutionTechTest.Infrastructure.csproj", "{DD9088D9-94F8-485B-8136-FAB0EEAC85A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvolutionTechTest.Infrastructure", "src\EvolutionTechTest.Infrastructure\EvolutionTechTest.Infrastructure.csproj", "{DD9088D9-94F8-485B-8136-FAB0EEAC85A7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvolutionTechTestWeb.WebUI", "src\EvolutionTechTestWeb\EvolutionTechTestWeb.WebUI\EvolutionTechTestWeb.WebUI.csproj", "{22C16584-9345-4B89-871F-97CE2DA7DF5D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvolutionTechTestWeb.Core", "src\EvolutionTechTestWeb\EvolutionTechTestWeb.Core\EvolutionTechTestWeb.Core.csproj", "{E210B758-B676-49B1-9694-836F59578A81}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvolutionTechTestWeb.Infrastructure", "src\EvolutionTechTestWeb\EvolutionTechTestWeb.Infrastructure\EvolutionTechTestWeb.Infrastructure.csproj", "{22A6D18D-A329-4F70-963E-E516580912E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EvolutionTechTestAPI", "EvolutionTechTestAPI", "{83C3D3DB-7D81-4E50-A1A3-4648F35A4721}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EvolutionTechTestWebUI", "EvolutionTechTestWebUI", "{59DBE266-6484-4C18-8BE1-D7D4D594EB88}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,9 +37,29 @@ Global
 		{DD9088D9-94F8-485B-8136-FAB0EEAC85A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD9088D9-94F8-485B-8136-FAB0EEAC85A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD9088D9-94F8-485B-8136-FAB0EEAC85A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22C16584-9345-4B89-871F-97CE2DA7DF5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22C16584-9345-4B89-871F-97CE2DA7DF5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22C16584-9345-4B89-871F-97CE2DA7DF5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22C16584-9345-4B89-871F-97CE2DA7DF5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E210B758-B676-49B1-9694-836F59578A81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E210B758-B676-49B1-9694-836F59578A81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E210B758-B676-49B1-9694-836F59578A81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E210B758-B676-49B1-9694-836F59578A81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22A6D18D-A329-4F70-963E-E516580912E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22A6D18D-A329-4F70-963E-E516580912E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22A6D18D-A329-4F70-963E-E516580912E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22A6D18D-A329-4F70-963E-E516580912E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{96C028B6-584B-4A09-9507-1EBE6DFF3488} = {83C3D3DB-7D81-4E50-A1A3-4648F35A4721}
+		{2C13D34C-C54D-4E1F-8431-82FFC9FF5BBF} = {83C3D3DB-7D81-4E50-A1A3-4648F35A4721}
+		{DD9088D9-94F8-485B-8136-FAB0EEAC85A7} = {83C3D3DB-7D81-4E50-A1A3-4648F35A4721}
+		{22C16584-9345-4B89-871F-97CE2DA7DF5D} = {59DBE266-6484-4C18-8BE1-D7D4D594EB88}
+		{E210B758-B676-49B1-9694-836F59578A81} = {59DBE266-6484-4C18-8BE1-D7D4D594EB88}
+		{22A6D18D-A329-4F70-963E-E516580912E5} = {59DBE266-6484-4C18-8BE1-D7D4D594EB88}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BC03E017-14A6-4B7D-8DE3-090B297193C0}

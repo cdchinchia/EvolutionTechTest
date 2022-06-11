@@ -1,0 +1,74 @@
+﻿@model IEnumerable<EvolutionTechTestWeb.Core.DTO.OrderDTO>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="fw-bold text-uppercase text-center">Lista de Ordenes</h1>
+<p class="text-center">
+    <a asp-action="Create" class="btn-primary btn">Crear Nueva Orden</a>
+    <a asp-controller="Home" class="btn btn-secondary px-3">Volver</a>
+</p>
+
+<div class="rounded shadow bg-white mx-2">
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.OrderUserId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OrderProductId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UnitValue)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Amount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SubTotal)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IVA)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Total)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OrderUserId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OrderProductId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UnitValue)
+                    </td>
+                                        <td>
+                        @Html.DisplayFor(modelItem => item.Amount)
+                    </td>
+                                        <td>
+                        @Html.DisplayFor(modelItem => item.SubTotal)
+                    </td>
+                                        <td>
+                        @Html.DisplayFor(modelItem => item.IVA)
+                    </td>
+                                        <td>
+                        @Html.DisplayFor(modelItem => item.Total)
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-secondary px-1 py-0 rounded-0">Editar</a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger px-1 py-0 rounded-0">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

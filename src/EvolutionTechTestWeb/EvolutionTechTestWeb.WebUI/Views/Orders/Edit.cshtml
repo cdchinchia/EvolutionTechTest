@@ -1,0 +1,95 @@
+﻿@model EvolutionTechTestWeb.Core.DTO.OrderDTO
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container p-4">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="text-primary">Editar una Orden</h2>
+        </div>
+    </div>
+    <br />
+    <br />
+
+    <div class="row">
+        <div class="col-sm-12">
+            <form method="post" asp-action="Update" enctype="multipart/form-data">
+                <input type="hidden" asp-for="Id"  />
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="OrderUserId"></label>
+                    </div>
+                    <div class="col-8">
+                        <input type="number" asp-for="OrderUserId" class="form-control" />
+                        <span asp-validation-for="OrderUserId" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="OrderProductId"></label>
+                    </div>
+                    <div class="col-8">
+                        <input type="number" asp-for="OrderProductId" class="form-control" />
+                        <span asp-validation-for="OrderProductId" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="UnitValue"></label>
+                    </div>
+                    <div class="col-8">
+                        <input type="number" asp-for="UnitValue" class="form-control" />
+                        <span asp-validation-for="UnitValue" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="Amount"></label>
+                    </div>
+                    <div class="col-8">
+                        <input type="number" asp-for="Amount" class="form-control" />
+                        <span asp-validation-for="Amount" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="SubTotal"></label>
+                    </div>
+                    <div class="col-8">
+                        <input type="number" asp-for="SubTotal" class="form-control" />
+                        <span asp-validation-for="SubTotal" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="IVA"></label>
+                    </div>
+                    <div class="col-8">
+                        <input type="number" asp-for="IVA" class="form-control" />
+                        <span asp-validation-for="IVA" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="Total"></label>
+                    </div>
+                    <div class="col-8">
+                        <input type="number" asp-for="Total" class="form-control" />
+                        <span asp-validation-for="Total" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row mt-4">
+                    <div class="col">
+                        <button type="submit" class="btn btn-primary form-control">Editar Orden</button>
+                    </div>
+                    <div class="col">
+                        <a asp-action="Index" class="btn btn-secondary form-control">Volver</a> 
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

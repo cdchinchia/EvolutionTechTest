@@ -1,0 +1,37 @@
+﻿@model EvolutionTechTestWeb.Core.DTO.ProductDTO
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1 class="text-center fw-bold text-uppercase">Eliminar Usuario</h1>
+
+<h3 class="text-center">¿Está seguro de querer eliminar este Usuario?</h3>
+<div>
+    <dl class="row shadow bg-white rounded mx-5 p-2">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Value)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Value)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete" class="mx-5 p-2 text-center">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> 
+        <a asp-action="Index" class="btn btn-primary">Volver</a>
+    </form>
+</div>
